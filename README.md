@@ -48,7 +48,7 @@ OPTIONS
 SELECT
   DECODE_ERC721_TRANSFER(data, topics) AS transfer
 FROM
-  `bigquery-public-data.ethereum_blockchain.logs`
+  `bigquery-public-data.crypto_ethereum.logs`
 WHERE
   topics[SAFE_OFFSET(0)] = "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
   AND address = "0x06012c8cf97bead5deae237070f9587f8e7a266d"
