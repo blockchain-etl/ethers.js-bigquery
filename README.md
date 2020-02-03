@@ -34,14 +34,7 @@ CREATE TEMP FUNCTION
     var parsedLog = interface.parseLog({topics: topics, data: data});
     let parsedValues = parsedLog.values;
 
-    var result = {};
-    for (var k in parsedValues) {
-        if (parsedValues.hasOwnProperty(k)) {
-            result[k] = ethers.utils.Interface.isIndexed(parsedValues[k]) ? parsedValues[k].hash : parsedValues[k]
-        }
-    }
-
-    return result;
+    return parsedLog.values;
 """
 OPTIONS
   ( library="gs://blockchain-etl-bigquery/ethers.js" );
