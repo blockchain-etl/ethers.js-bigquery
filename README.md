@@ -32,7 +32,6 @@ CREATE TEMP FUNCTION
     };
     var interface = new ethers.utils.Interface([CRYPTOKITTY_TRANSFER]);
     var parsedLog = interface.parseLog({topics: topics, data: data});
-    let parsedValues = parsedLog.values;
 
     return parsedLog.values;
 """
