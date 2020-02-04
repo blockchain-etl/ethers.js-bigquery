@@ -30,8 +30,8 @@ CREATE TEMP FUNCTION
       "name": "Transfer",
       "type": "event"
     };
-    var interface = new ethers.utils.Interface([CRYPTOKITTY_TRANSFER]);
-    var parsedLog = interface.parseLog({topics: topics, data: data});
+    var interface_instance = new ethers.utils.Interface([CRYPTOKITTY_TRANSFER]);
+    var parsedLog = interface_instance.parseLog({topics: topics, data: data});
 
     return parsedLog.values;
 """
