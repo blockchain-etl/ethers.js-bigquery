@@ -1,36 +1,34 @@
 const ethers = require('ethers');
 
-let abi = [
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "name": "hash",
-                "type": "bytes32"
-            },
-            {
-                "indexed": true,
-                "name": "name",
-                "type": "string"
-            },
-            {
-                "indexed": false,
-                "name": "value",
-                "type": "uint256"
-            },
-            {
-                "indexed": false,
-                "name": "registrationDate",
-                "type": "uint256"
-            }
-        ],
-        "name": "HashInvalidated",
-        "type": "event"
-    }
-];
+let abi = {
+    "anonymous": false,
+    "inputs": [
+        {
+            "indexed": true,
+            "name": "hash",
+            "type": "bytes32"
+        },
+        {
+            "indexed": true,
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+        },
+        {
+            "indexed": false,
+            "name": "registrationDate",
+            "type": "uint256"
+        }
+    ],
+    "name": "HashInvalidated",
+    "type": "event"
+};
 
-var interface_instance = new ethers.utils.Interface(abi);
+var interface_instance = new ethers.utils.Interface([abi]);
 var parsedLog = interface_instance.parseLog({
     topics: [
         '0x1f9c649fe47e58bb60f4e52f0d90e4c47a526c9f90c5113df842c025970b66ad',
