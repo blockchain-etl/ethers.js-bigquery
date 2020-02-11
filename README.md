@@ -49,7 +49,8 @@ WHERE
 LIMIT 100;
 ```
 
-The above query returns decoded CryptoKitty transfer events.
+The above query returns decoded CryptoKitty transfer events. You can run it by pasting into the BigQuery console SQL
+editor https://console.cloud.google.com/bigquery. 
 
 ```
 CREATE TEMP FUNCTION
