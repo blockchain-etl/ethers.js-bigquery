@@ -2,6 +2,8 @@
 
 This module repackages [ethers.js](https://github.com/ethers-io/ethers.js/) for use in BigQuery, to decode Ethereum event logs and transaction inputs.
 
+https://medium.com/swlh/how-to-package-a-javascript-library-for-use-in-bigquery-2bf91061f66f
+
 Example usage:
 
 ```
